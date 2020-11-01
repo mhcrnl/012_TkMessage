@@ -11,6 +11,16 @@ class Application(tk.Frame):
 
     def create_widgets(self):
 
+        # message widget
+        self.message = tk.Message(self, text="here is the message text")
+        self.message.pack(side="top")
+
+        self.message_1 = tk.Message(self)
+        self.message_1.pack(side="top")
+        self.var = tk.StringVar()
+        self.var.set("Salut! TkMessage")
+        self.message_1["textvariable"]=self.var
+        
         # create a tkinter menu widget
         self.menubar = tk.Menu(self)
         """ activebackground
